@@ -46,6 +46,15 @@ public class MeatCalculator {
             }
         });
 
+        JButton deleteButton = new JButton("Delete");
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                deleteSausage();
+                updateProductListDisplay();
+            }
+        });
+
         // Create a text area to display the list of products
         productListTextArea = new JTextArea(10, 30);
         productListTextArea.setEditable(false);
@@ -72,6 +81,7 @@ public class MeatCalculator {
                                 .addComponent(productNameField)
                                 .addComponent(pricePerKgField)
                                 .addComponent(addButton))
+                                .addComponent(deleteButton)
         );
 
         // Set the vertical group
@@ -84,6 +94,7 @@ public class MeatCalculator {
                                 .addComponent(pricePerKgLabel)
                                 .addComponent(pricePerKgField))
                         .addComponent(addButton)
+                        .addComponent(deleteButton)
         );
 
         // Create a panel for the product list
