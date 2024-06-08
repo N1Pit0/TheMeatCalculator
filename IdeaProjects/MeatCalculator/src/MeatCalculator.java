@@ -186,6 +186,7 @@ public class MeatCalculator {
     private void deleteSausage() {
         sausage = new Sausage();
         indexWeight = 0;
+        averagePriceLabel.setText("Average Price per Kg: $0.00");
     }
 
     private void calculatePricePerKg() {
